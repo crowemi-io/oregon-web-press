@@ -7,7 +7,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 const navigation = [
   { name: 'submit order', href: '/order' },
   { name: 'upload files', href: 'https://spaces.hightail.com/uplink/OWP' },
-  { name: 'request estimate', href: '/estimate' },
+  { name: 'request estimate', href: '/quote' },
   { name: 'print services', href: '/services' },
   { name: 'who we are', href: '/about' },
   { name: 'contact us', href: '/contact' },
