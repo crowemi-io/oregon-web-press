@@ -1,5 +1,7 @@
-export default function Login() {
+import Login from "@/ui/login";
+
+export default function LoginPage() {
     return (
-        <h1>login</h1>
+        <Login />
     )
 }

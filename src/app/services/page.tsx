@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Carousel from "@/ui/carousel";
 
 export default function Services() {
   return (
@@ -60,12 +61,13 @@ export default function Services() {
             <Image
               src="/services/binding-icon.svg"
               alt=""
-              width={1024}
-              height={676}
+              width={125}
+              height={125}
               loading="lazy"
+              className="mx-auto py-6"
             />
             <div>
-              <h1 className="py-6 text-pretty text-3xl text-center tracking-tight font-bold text-primary">
+              <h1 className="py-6 text-pretty text-2xl text-center tracking-tight font-bold text-primary">
                 binding
               </h1>
               <p className="text-center">
@@ -78,12 +80,13 @@ export default function Services() {
             <Image
               src="/services/coating-icon.svg"
               alt=""
-              width={1024}
-              height={676}
+              width={125}
+              height={125}
               loading="lazy"
+              className="mx-auto py-6"
             />
             <div>
-              <h1 className="py-6 text-pretty text-3xl text-center tracking-tight font-bold text-primary">
+              <h1 className="py-6 text-pretty text-2xl text-center tracking-tight font-bold text-primary">
                 uv coating
               </h1>
               <p className="text-center">
@@ -95,12 +98,13 @@ export default function Services() {
             <Image
               src="/services/size-icon.svg"
               alt=""
-              width={1024}
-              height={676}
+              width={125}
+              height={125}
               loading="lazy"
+              className="mx-auto py-6"
             />
             <div>
-              <h1 className="py-6 text-pretty text-3xl text-center tracking-tight font-bold text-primary">
+              <h1 className="py-6 text-pretty text-2xl text-center tracking-tight font-bold text-primary">
                 publication features
               </h1>
               <p className="text-center">
@@ -113,7 +117,35 @@ export default function Services() {
       </div>
 
       <div className="py-12 px-12 sm:py-24">
-        
+        <div className="text-center pb-24">
+          <h1 className="text-pretty text-3xl tracking-tight text-tertiary sm:text-5xl">
+            expanding your reach with{" "}
+            <span className="font-bold text-primary">print</span>
+          </h1>
+          <p className="mt-6 text-lg/8 text-gray-600">
+            showcase your organization with standard and custom-sized,
+            high-quality print materials that keep you visible year-round
+          </p>
+        </div>
+        <div className="md:grid md:grid-cols-3 py-6">
+          <div>
+            <Carousel title="postcards" images={["/services/postcard/1.jpg", "/services/postcard/2.jpg"]} />
+          </div>
+          <div>
+            <Carousel title="flyers | newsletters" images={["/services/flyer/1.jpg", "/services/flyer/2.jpg", "/services/flyer/3.jpg"]} />
+          </div>
+          <div>
+            <Carousel title="calendars" images={["/services/calendar/1.jpg", "/services/calendar/2.jpg", "/services/calendar/3.jpg"]} />
+          </div>
+        </div>
+        <div className="md:grid md:grid-cols-2 py-6">
+          <div>
+            <Carousel title="catalogs | books" images={["/services/catalog/1.jpg", "/services/catalog/2.jpg", "/services/catalog/3.jpg"]} />
+          </div>
+          <div>
+              <Carousel title="brochures | maps" images={["/services/brochure/1.jpg", "/services/brochure/2.jpg", "/services/brochure/3.jpg"]} />
+          </div>
+        </div>
       </div>
     </>
   );
