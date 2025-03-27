@@ -18,7 +18,7 @@ export default function Home() {
                 <div className="mt-10 flex items-center gap-x-6">
                   <a
                     href="/services"
-                    className="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm"
+                    className="rounded-md bg-primary hover:bg-tertiary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm"
                   >
                     services
                   </a>
@@ -26,7 +26,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <Image src="/print-products.png" alt="" width={1024} height={676} />
+          <Image src="/assets/print-products.png" alt="" width={1024} height={676} />
         </div>
         <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32" />
       </div>

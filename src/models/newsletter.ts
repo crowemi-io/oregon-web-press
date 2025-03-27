@@ -19,7 +19,7 @@ const newsletter  = models.Newsletter || model<INewsletter>(
 export async function subscribe(email: string) : Promise<{success: boolean, message: string | null}> {
   try {
     await connect(
-      GetConfig().uri
+      GetConfig().database_uri
     );
     const exists = await newsletter.find({ email: email });
     

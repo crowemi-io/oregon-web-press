@@ -4,6 +4,7 @@ import { subscribe } from "@/models/newsletter";
 import {Modal, ModalType} from "./modal";
 import type {IModalProps} from "./modal";
 import React, { useState } from "react";
+import Image from "next/image";
 
 const navigation = {
   social: [
@@ -22,8 +23,6 @@ const navigation = {
     }
   ],
 };
-
-
 
 export default function Footer() {
   const [modal, setModal] = useState({ message: '', title: '', type: ModalType.Success, button: true, open: false, setOpen: setOpen } as IModalProps);
@@ -53,10 +52,12 @@ export default function Footer() {
         <div className="mx-auto max-w-7xl px-6 py-6">
           <div className="py-8 justify-center ">
             <div className="pt-6">
-              <img
+              <Image
                 alt="Oregon Web Press"
-                src="logo-owp-blue.png"
+                src="/assets/logo-owp-blue.png"
                 className="h-9"
+                width={100}
+                height={100}
               />
             </div>
             <div className="pt-6 text-sm/6 text-gray-600">
@@ -64,7 +65,7 @@ export default function Footer() {
             <a href="tel:+15419263000">(541)-926-3000</a> | 263 29th Ave SW Albany, OR 97322
             </p>
             <p>
-              contact@oregonwebpress.com
+              <a href="mailto:contact@oregonwebpress.com">contact@oregonwebpress.com</a>
             </p>
             </div>
           </div>
@@ -72,23 +73,24 @@ export default function Footer() {
           <div className="border-t border-gray-900/10 pt-8 lg:flex lg:items-center lg:justify-between">
             <div>
               <h3 className="text-sm/6 font-semibold text-gray-900">
-                Subscribe to our newsletter
+                subscribe to our newsletter
               </h3>
               <p className="mt-2 text-sm/6 text-gray-600">
                 The latest news, articles, and resources, sent to your inbox
                 weekly.
               </p>
             </div>
+
             <form action={handler} className="mt-6 sm:flex sm:max-w-md lg:mt-0">
               <label htmlFor="email" className="sr-only">
-                Email address
+                email address
               </label>
               <input
                 id="email"
                 name="email"
                 type="email"
                 required
-                placeholder="Enter your email"
+                placeholder="enter your email"
                 autoComplete="email"
                 className="w-full min-w-0 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 sm:w-56 sm:text-sm/6"
               />
